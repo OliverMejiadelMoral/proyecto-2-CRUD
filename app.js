@@ -35,9 +35,25 @@ function validarFormulario(e) {
         listaEmpleados.push({...objEmpleado});
 
         mostrarEmpleados();
+
+        formulario.reset();
+
+        limpiarObjeto();
+
+    }
+
+    function limpiarObjeto() {
+        objEmpleado.id = '';
+        objEmpleado.nombre = '';
+        objEmpleado.puesto = '';
+        
+
     }
 
     function mostrarEmpleados() {
+
+        limpiarHTML();
+
         const divEmpleados = document.querySelector('.div-empleados');
 
         listaEmpleados.forEach(empleado => {
@@ -67,4 +83,10 @@ function validarFormulario(e) {
         });
     }
 
+    function limpiarHTML() {
+        const divEmpleados = document.querySelector('.div-empleados');
+        while(divEmpleados.firstChild) {
+            divEmpleados.removeChild(divEmpleados.firstChild);
+        }
+    }
 }
