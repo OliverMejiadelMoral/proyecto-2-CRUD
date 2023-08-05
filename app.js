@@ -24,7 +24,7 @@ function validarFormulario(e) {
     if(editando) {
         editando = false; 
     } else {
-        objEmpleado.id = Data.now();
+        objEmpleado.id = Date.now();
         objEmpleado.nombre = nombreInput.value;
         objEmpleado.puesto = puestoInput.value;
 
