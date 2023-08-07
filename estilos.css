@@ -121,3 +121,21 @@ hr {
 .btn-eliminar {
     background-color: red;
 }
+
+
+@media screen and (max-width: 480px) {
+    .contenedor {
+        flex-direction: column;
+    }
+    
+    .contenedor .div-formulario,
+    .contenedor .div-listado {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    /* Estilos específicos para el listado de empleados */
+    .contenedor .div-listado .div-empleados {
+        padding: 0;
+    }
+}
